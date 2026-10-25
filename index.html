@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BotLifeSI · Free Grok Bot templates that do the busywork</title>
+<meta name="description" content="A growing family of free Grok Bot templates, including Vcardbot for your virtual business card, Duobot for a household in sync, and HomeKeepbot for your home appliances.">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:title" content="BotLifeSI · Free Grok Bot templates">
+<meta property="og:description" content="A growing family of free Grok Bot templates. You decide. The bot prepares.">
+<meta property="og:image" content="https://botlifesi.com/images/x-post-graphic.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+  HOW TO ADD A NEW BOT
+  1. Put its square avatar in images/ (transparent PNG works best), e.g. images/newbot-avatar.png,
+     plus an optional wide picture (about 16:9) for its section, e.g. images/newbot-banner.jpg,
+     and a QR code for its template link, e.g. images/newbot-template-qr.png (copy a "qr" block too).
+  2. Hero faces: add <img class="contain" src="images/newbot-avatar.png" alt=""> inside <div class="hero-bots">.
+     The row wraps on its own, so any number of faces fits.
+  3. Bot grid: copy one <a class="bot-card" ...> block inside <div class="bot-cards"> and paste it just above
+     the "More bots on the way" card. Change the href (#newbot), image, name, and one-line blurb.
+     The grid uses auto-fit, so it reflows by itself.
+  4. Bot section: copy a whole <section class="section ..." id="..."> bot block (e.g. HomeKeepbot), paste it
+     after the last bot section and before the "promise" section. Change the id to match step 3's href.
+     Alternate "section alt" / "section" for the background, and add or remove "reverse" on the inner
+     <div class="container bot"> so the picture flips sides.
+  5. Optional: add a menu link in <nav> and a button in the "Ready to hand off the busywork?" section.
+  6. Keep it static: relative paths only, no build step. Use the real x.ai/bot/... template link.
+-->
+
+<nav class="nav" aria-label="Main">
+  <div class="container">
+    <a class="brand" href="#top">BotLife<span>SI</span></a>
+    <ul>
+      <li><a href="#vcardbot">Vcardbot</a></li>
+      <li><a href="#duobot">Duobot</a></li>
+      <li><a href="#homekeepbot">HomeKeepbot</a></li>
+      <li><a href="#promise">Your control</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-bots" aria-hidden="true">
+      <img class="contain" src="images/vcardbot-avatar.png" alt="">
+      <img src="images/avatar-sarah.jpg" alt="">
+      <img class="contain" src="images/homekeepbot-avatar.png" alt="">
+    </div>
+    <h1 class="tagline">Bots that make life <span>easier.</span></h1>
+    <p class="subhead">A growing family of free Grok Bot templates that handle the busywork, from your virtual business card to your household plans and your home's upkeep. Pick one, make it yours in minutes, and stay in charge of every step.</p>
+    <hr class="rule">
+    <a class="btn" href="#bots">Meet the bots</a>
+  </div>
+</header>
+
+<section class="section alt" id="bots">
+  <div class="container">
+    <p class="eyebrow">The bots</p>
+    <h2>Meet the bots</h2>
+    <p class="lead">A growing family of Grok Bot templates. Each one is ready-made: start from the template and it walks you through setup.</p>
+    <div class="bot-cards">
+      <a class="bot-card" href="#vcardbot">
+        <img class="contain" src="images/vcardbot-avatar.png" alt="Vcardbot avatar">
+        <h3>Vcardbot</h3>
+        <p>Your professional virtual business card. Tap. Scan. Save.</p>
+        <span class="more">See Vcardbot →</span>
+      </a>
+      <a class="bot-card" href="#duobot">
+        <img src="images/avatar-sarah.jpg" alt="Duobot avatar">
+        <h3>Duobot</h3>
+        <p>One shared calendar and one shared board, so your household stays in sync.</p>
+        <span class="more">See Duobot →</span>
+      </a>
+      <a class="bot-card" href="#homekeepbot">
+        <img class="contain" src="images/homekeepbot-avatar.png" alt="HomeKeepbot mascot">
+        <h3>HomeKeepbot</h3>
+        <p>Parts. Warranties. Maintenance. Handled.</p>
+        <span class="more">See HomeKeepbot →</span>
+      </a>
+      <!-- NEW BOT CARD GOES ABOVE THIS LINE (copy a card block above) -->
+      <div class="bot-card soon" aria-label="More bots on the way">
+        <div class="soon-icon" aria-hidden="true">+</div>
+        <h3>More bots on the way</h3>
+        <p>New templates are in the works. Check back soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <p class="eyebrow">How it works</p>
+    <h2>Simple to start</h2>
+    <ol class="steps">
+      <li class="step"><div class="step-num">1</div><h3>Pick a template</h3><p>Open the bot you want and start your own copy in Grok Bot. It's free.</p></li>
+      <li class="step"><div class="step-num">2</div><h3>Tell it about you</h3><p>Answer a few friendly questions, or just send a photo or a voice note. The bot does the setup.</p></li>
+      <li class="step"><div class="step-num">3</div><h3>You approve, it prepares</h3><p>Your bot drafts, tracks, and reminds. Anything sent, booked, or bought waits for your okay.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 1. Vcardbot -->
+<section class="section alt" id="vcardbot">
+  <div class="container bot">
+    <div class="bot-media">
+      <img src="images/x-post-graphic.png" alt="Vcardbot graphic: Your professional virtual card. Tap. Scan. Save. Shown on a phone." loading="lazy">
+    </div>
+    <div class="bot-copy">
+      <div class="bot-head">
+        <img class="contain" src="images/vcardbot-avatar.png" alt="">
+        <h2>Vcardbot</h2>
+      </div>
+      <p class="bot-tag">Your professional virtual card. Tap. Scan. Save.</p>
+      <p>Skip the subscription card apps. Vcardbot builds your own professional virtual business card with Grok Bot in minutes.</p>
+      <ul class="features">
+        <li>Your photo and your colors</li>
+        <li>Your social links, one tap away</li>
+        <li>A QR code people can scan to open your card</li>
+        <li>A one-tap <strong>Save contact</strong> button (vCard file) that adds you to their phone</li>
+        <li>Help writing your card link to a physical NFC card</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://x.ai/bot/PVXoG6cwqxR5waSXdWzb5" target="_blank" rel="noopener">Get Vcardbot</a>
+      </div>
+      <div class="qr">
+        <img src="images/vcardbot-template-qr.png" alt="QR code that opens the Vcardbot template">
+        <span>On a computer? Scan with your phone's camera to open the Vcardbot template on your phone.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Duobot -->
+<section class="section" id="duobot">
+  <div class="container bot reverse">
+    <div class="bot-media">
+      <!-- Demo video is hosted on duobotsi.com (not copied here). H.264 MP4, plays inline on iPhone. -->
+      <video class="demo-video" controls playsinline preload="metadata"
+             poster="https://duobotsi.com/images/video-poster.jpg"
+             aria-label="Duobot demo video: how it works">
+        <source src="https://duobotsi.com/demo.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="https://duobotsi.com/demo.mp4">Watch the demo</a>.
+      </video>
+      <p class="video-caption">▶ Watch how it works · <a href="https://duobotsi.com/demo.mp4" target="_blank" rel="noopener">Watch the demo</a> on its own page</p>
+    </div>
+    <div class="bot-copy">
+      <div class="bot-head">
+        <img src="images/avatar-sarah.jpg" alt="">
+        <h2>Duobot</h2>
+      </div>
+      <p class="bot-tag">Stay in sync.</p>
+      <p>Duobot helps couples and households communicate better with a shared Google Calendar and a shared Trello board, so you both see the same plan without relaying everything.</p>
+      <ul class="features">
+        <li>A shared "honey-duo" Trello board with a list for every part of life together</li>
+        <li>Groceries, bills, gifts, date nights, and vacations, all in one place</li>
+        <li>Quick capture: say it in a sentence and Duobot files it</li>
+        <li>Friendly heads-ups before a bill is due or a special date arrives</li>
+        <li>A weekly check-in so you both know what's coming up</li>
+        <li>Drafts for your approval, no auto-pay, and it never books without your okay</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://x.ai/bot/VXZIFzim31x3jeBtGnvl5" target="_blank" rel="noopener">Get Duobot</a>
+        <a class="btn-ghost" href="https://duobotsi.com" target="_blank" rel="noopener">Learn more</a>
+      </div>
+      <div class="freebie">
+        <p><strong>Free for your board:</strong> Trello card covers for each list, plus a matching board background, ready to download.</p>
+        <a class="btn-ghost btn-small" href="https://duobotsi.com/#covers" target="_blank" rel="noopener">Download Trello card covers</a>
+      </div>
+      <div class="qr">
+        <img src="images/duobot-template-qr.png" alt="QR code that opens the Duobot template">
+        <span>On a computer? Scan with your phone's camera to open the Duobot template on your phone.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. HomeKeepbot -->
+<section class="section alt" id="homekeepbot">
+  <div class="container bot">
+    <div class="bot-media">
+      <img src="images/homekeepbot-banner.jpg" alt="HomeKeepbot: Parts. Warranties. Maintenance. Handled. Make house maintenance easy." loading="lazy">
+    </div>
+    <div class="bot-copy">
+      <div class="bot-head">
+        <img class="contain" src="images/homekeepbot-avatar.png" alt="">
+        <h2>HomeKeepbot</h2>
+      </div>
+      <p class="bot-tag">Parts. Warranties. Maintenance. Handled.</p>
+      <p>Make house maintenance easy. HomeKeepbot builds a Page that tracks every appliance in your home, reminds you about upkeep based on each model's warranty and manual, and orders the exact parts once you approve.</p>
+      <ul class="features">
+        <li>Snap a photo of the model plate to log brand, model, and serial</li>
+        <li>One Page for appliance info, official manuals, and parts</li>
+        <li>Warranty tracking with end dates and expiring-soon flags</li>
+        <li>Maintenance reminders from each model's manual and warranty</li>
+        <li>Finds the exact replacement part and compares sellers on price, stock, and returns; orders only after you approve</li>
+        <li>Logs paint colors, home materials, and filter and bulb sizes from a photo or voice note</li>
+        <li>Optional Google Doc or Sheet copy in your Drive</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://x.ai/bot/ozF1SpAaswVhWbietmPfw" target="_blank" rel="noopener">Get HomeKeepbot</a>
+      </div>
+      <div class="qr">
+        <img src="images/homekeepbot-template-qr.png" alt="QR code that opens the HomeKeepbot template">
+        <span>On a computer? Scan with your phone's camera to open the HomeKeepbot template on your phone.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW BOT SECTIONS GO ABOVE THIS LINE (see "HOW TO ADD A NEW BOT" at the top) -->
+
+<section class="section promise" id="promise">
+  <div class="narrow">
+    <p class="eyebrow">Privacy and control</p>
+    <h2>You decide. The bot prepares.</h2>
+    <hr class="rule">
+    <p class="lead" style="margin-inline:auto">Every bot here drafts and prepares, and you approve. Nothing is sent or bought without your okay.</p>
+  </div>
+  <div class="container">
+    <div class="promise-points">
+      <div><h3>Nothing sent</h3><p>Messages and emails are drafts for you to review first.</p></div>
+      <div><h3>Nothing bought</h3><p>Parts and orders wait for your approval of the exact item and total. No auto-pay.</p></div>
+      <div><h3>Nothing booked</h3><p>Reservations and plans are suggestions until you say yes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt cta">
+  <div class="narrow">
+    <h2>Ready to hand off the busywork?</h2>
+    <p class="lead" style="margin-inline:auto">Pick a bot and make it yours in minutes. More are on the way.</p>
+    <div class="actions">
+      <a class="btn" href="https://x.ai/bot/PVXoG6cwqxR5waSXdWzb5" target="_blank" rel="noopener">Vcardbot</a>
+      <a class="btn" href="https://x.ai/bot/VXZIFzim31x3jeBtGnvl5" target="_blank" rel="noopener">Duobot</a>
+      <a class="btn" href="https://x.ai/bot/ozF1SpAaswVhWbietmPfw" target="_blank" rel="noopener">HomeKeepbot</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Follow along on X: <a href="https://x.com/legallyrenee" target="_blank" rel="noopener">@legallyrenee</a></p>
+    <p>BotLifeSI.com · <button type="button" class="linkbtn" id="cookie-open">Cookie settings</button></p>
+    <p class="fine disclaimer">For entertainment and informational purposes only. These are independent Grok Bot templates and are not affiliated with, endorsed by, or sponsored by xAI, Google, Trello, Atlassian, or Apple. Grok, Google Calendar, Google Drive, Trello, and iPhone are trademarks of their respective owners. Templates are provided as-is, and images, names, and example details shown on this site are illustrative and may differ from what you see in your own account. Each bot drafts messages and prepares orders, bookings, and reminders for your approval; you stay in control of anything that is sent, paid, booked, or bought. Bots can make mistakes, so use your own independent judgment and verify anything important before relying on it. Avoid entering confidential or sensitive information, such as client matters, privileged communications, passwords, financial account numbers, or health records, into any bot. Nothing on this site is legal advice. No bots were harmed in the making of this site.</p>
+  </div>
+</footer>
+
+<!-- Cookie notice: no analytics or ad cookies. Choice saved in localStorage ("botlifesi_cookie_choice"). Footer "Cookie settings" reopens it. -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="ck-title" hidden>
+  <div class="cookie-box">
+    <div class="cookie-text">
+      <strong id="ck-title">Cookies</strong>
+      <p>We keep it simple. This site doesn't use analytics or advertising cookies, and we don't sell your information. The only thing we save is a small setting on your device that remembers your choice. Fonts load from Google Fonts, and the Duobot demo video comes from duobotsi.com. You can change your choice anytime from Cookie settings in the footer. <a href="#cookie-notice" id="ck-learn">Learn more</a></p>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="cbtn" id="ck-reject">Decline</button>
+      <button type="button" class="cbtn primary" id="ck-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="ckm-title" hidden>
+  <div class="cookie-panel">
+    <h2 id="ckm-title">Cookie settings</h2>
+    <div class="ck-row"><div><strong>Essential</strong><span>Remembers your cookie choice on this device. Always on.</span></div><input type="checkbox" checked disabled aria-label="Essential, always on"></div>
+    <div class="ck-row"><div><strong>Analytics</strong><span>Not used. This site doesn't count or track visits.</span></div><input type="checkbox" disabled aria-label="Analytics, not used"></div>
+    <div class="ck-row"><div><strong>Advertising</strong><span>Not used. No ad cookies, ever.</span></div><input type="checkbox" disabled aria-label="Advertising, not used"></div>
+    <p class="ck-note">Third-party content (Google Fonts and the duobotsi.com demo video) is explained in the <a href="#cookie-notice" id="ckm-learn">cookie notice</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="cbtn" id="ckm-close">Cancel</button>
+      <button type="button" class="cbtn primary" id="ckm-save">Save choices</button>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-modal" id="cookie-notice" role="dialog" aria-modal="true" aria-labelledby="ckn-title" hidden>
+  <div class="cookie-panel notice">
+    <h2 id="ckn-title">Cookie notice</h2>
+    <p><strong>What we save.</strong> One small setting in your browser's local storage that remembers your choice on this notice. We don't set any other cookies.</p>
+    <p><strong>No analytics or ads.</strong> This site doesn't count visits, track you, or show ads. Accept or Decline, the site works the same.</p>
+    <p><strong>Third parties.</strong> To show the page, your browser loads fonts from Google Fonts, and the Duobot demo video and its preview image from duobotsi.com. Those services receive standard technical information such as your IP address and browser type. Our web host may also keep standard server logs. If you follow links to Grok Bot, X, duobotsi.com, or other sites, those sites have their own cookie and privacy policies.</p>
+    <p><strong>Your choices.</strong> You can change your choice anytime from Cookie settings in the footer, or clear this site's data in your browser.</p>
+    <div class="cookie-actions"><button type="button" class="cbtn primary" id="ckn-close">Close</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='botlifesi_cookie_choice', $=function(i){return document.getElementById(i)};
+  var banner=$('cookie-banner'), modal=$('cookie-modal'), notice=$('cookie-notice');
+  function get(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+  function save(choice){try{localStorage.setItem(KEY,JSON.stringify({choice:choice,date:new Date().toISOString()}))}catch(e){}banner.hidden=true;modal.hidden=true;}
+  function openModal(){banner.hidden=true;modal.hidden=false;$('ckm-save').focus();}
+  function openNotice(e){if(e)e.preventDefault();notice.hidden=false;$('ckn-close').focus();}
+  if(!get()){banner.hidden=false;$('ck-accept').focus({preventScroll:true});}
+  $('ck-learn').onclick=openNotice;
+  $('ckm-learn').onclick=openNotice;
+  $('ckn-close').onclick=function(){notice.hidden=true;};
+  $('ck-accept').onclick=function(){save('accepted')};
+  $('ck-reject').onclick=function(){save('declined')};
+  $('cookie-open').onclick=openModal;
+  $('ckm-save').onclick=function(){var c=get();save(c&&c.choice?c.choice:'accepted')};
+  $('ckm-close').onclick=function(){modal.hidden=true;if(!get())banner.hidden=false;};
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;if(!notice.hidden)notice.hidden=true;else if(!modal.hidden)$('ckm-close').click();});
+})();
+</script>
+
+</body>
+</html>
