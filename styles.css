@@ -166,3 +166,11 @@ footer .disclaimer{line-height:1.55}
 /* Featured on Grok Bot Shelf badge */
 .shelf-badge{display:inline-block;margin:14px 0 4px;line-height:0}
 .shelf-badge img{width:220px;height:44px}
+
+/* GBotRanked ranking note */
+.rank-note{display:flex;flex-direction:column;gap:2px;max-width:320px;margin:10px 0 4px;padding:10px 16px;border:1px solid var(--gold);border-radius:14px;background:rgba(217,194,154,.06);color:var(--text);text-decoration:none;transition:border-color .15s,transform .15s}
+.rank-note:hover{border-color:var(--accent);transform:translateY(-2px)}
+.rank-label{color:var(--gold);font-weight:800;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.rank-score{font-weight:900;font-size:1.15rem}
+.rank-score small{font-size:.8rem;color:var(--muted);font-weight:700}
+.rank-detail{color:var(--muted);font-size:.9rem}
